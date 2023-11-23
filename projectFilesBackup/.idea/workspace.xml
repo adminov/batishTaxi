@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="45745db3-ad4d-42c9-a8a5-f4bcb5dfc8cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/batishtaxi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/batishtaxi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\uberApp\batishtaxi\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="2YEy0ulwrsXT0T55k8nsJF4ktdH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.ide.apk.debugging" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\uberApp\batishtaxi\scr\screens" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="batishtaxi" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="45745db3-ad4d-42c9-a8a5-f4bcb5dfc8cd" name="Default Changelist" comment="" />
+      <created>1700104813244</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700104813244</updated>
+      <workItem from="1700104815869" duration="6166000" />
+      <workItem from="1700112724976" duration="8039000" />
+      <workItem from="1700191589524" duration="5540000" />
+      <workItem from="1700211099288" duration="4225000" />
+      <workItem from="1700215521389" duration="2710000" />
+      <workItem from="1700221320349" duration="359000" />
+      <workItem from="1700452319864" duration="2409000" />
+      <workItem from="1700455203250" duration="1176000" />
+      <workItem from="1700456428164" duration="2663000" />
+      <workItem from="1700459226904" duration="2439000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1700459447495">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1700459447495" />
+    <state x="1309" y="326" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1700201763190">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1309" y="326" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1700201763190" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1700458593353">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1700458593353" />
+    <state width="723" height="281" key="GridCell.Tab.0.bottom" timestamp="1700211062850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="723" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1700211062850" />
+    <state width="723" height="281" key="GridCell.Tab.0.center" timestamp="1700211062850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="723" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1700211062850" />
+    <state width="723" height="281" key="GridCell.Tab.0.left" timestamp="1700211062850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="723" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1700211062850" />
+    <state width="723" height="281" key="GridCell.Tab.0.right" timestamp="1700211062850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="723" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1700211062850" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1700460937715">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1700460937715" />
+    <state x="634" y="249" width="976" height="615" key="com.intellij.ide.util.TipDialog" timestamp="1700459233914">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="634" y="249" width="976" height="615" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1700459233914" />
+    <state x="1198" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1700460009232">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1198" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1700460009232" />
+  </component>
+</project>

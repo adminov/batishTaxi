@@ -1,5 +1,4 @@
-
-import { StyleSheet, Text, View } from 'react-native';
+// import { StyleSheet} from 'react-native';
 import {Provider} from "react-redux";
 import {store} from "./scr/store/store";
 import HomeScreen from "./scr/screens/HomeScreen";
@@ -39,11 +38,11 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+// });
