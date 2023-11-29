@@ -1,22 +1,17 @@
 import React from 'react';
-import {View, SafeAreaView, Image} from "react-native";
+import {View} from "react-native";
 import tw from "tailwind-react-native-classnames"
+import Map from "../components/Map";
 
 const MapScreen = () => {
     return (
-        <SafeAreaView>
-            <View style={tw`p-5`}>
-                <Image
-                    style={{
-                        width: 100,
-                        height: 100,
-                        resizeMode: "contain",
-                    }}
-                    source={{uri: "https://links.papareact.com/gzs"}}
-                />
-                <h2>hi</h2>
+        <View>
+            <View style={tw`h-1/2`}>
+                <Map/>
             </View>
-        </SafeAreaView>
+
+            <View style={tw`h-1/2`}></View>
+        </View>
     );
 };
 

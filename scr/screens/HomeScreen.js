@@ -36,8 +36,8 @@ const HomeScreen = () => {
         }
     }
 
-    const getItemText = (item) => {
-        console.log(item)
+    const getItemText = (item, index) => {
+        console.log(item, index)
         let mainText = item.address.name;
         if (item.type === "city" && item.address.state) {
             mainText += ", " + item.address.state
@@ -84,21 +84,26 @@ const HomeScreen = () => {
                                         fontSize: 18,
                                     },
                                 }}
-                                fetchDetails={true}
-                                enablePoweredByContainer={false}
+                                // fetchDetails={true}
+                                // enablePoweredByContainer={false}
                                 returnKeyType={"search"}
                                 minLength={2}
                             />
                             <FlatList
                                 data={dataOne}
-                                renderItem={({item}) => (
+                                renderItem={({item, index}) => (
                                         <Pressable
-                                            onPress={(item, details = null) => {
-                                                setOrigin()
+                                            onPress={() => {
+                                                dispatch(setOrigin({
+                                                    locationLat: item.lat,
+                                                    locationLon: item.lon,
+                                                    description: item.display_address
+                                                }))
+                                                console.log(item.lon)
                                             }}
                                         >
                                             {
-                                                getItemText(item)
+                                                getItemText(item, index)
                                             }
                                         </Pressable>
                                 )}
