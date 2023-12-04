@@ -12,6 +12,7 @@ import {
 import tw from "tailwind-react-native-classnames"
 import NavOptions from "../components/NavOptions";
 import {GOOGLE_MAPS_APIKEY} from "@env";
+
 import {useDispatch} from "react-redux";
 import {setOrigin, setDestination} from "../navSlice/navSlice"
 
@@ -22,7 +23,7 @@ const HomeScreen = () => {
     const [input, setInput] = useState('');
     const [dataOne, setDataOne] = useState([]);
 
-    //
+
     const onChangeText = async (text) => {
         setInput(text)
         if (text.length === 0) return setDataOne([])
@@ -76,14 +77,6 @@ const HomeScreen = () => {
                             <TextInput
                                 placeholder={'Find Location'}
                                 onChangeText={textInput => onChangeText(textInput)}
-                                style={{
-                                    container: {
-                                        flex: 0,
-                                    },
-                                    input: {
-                                        fontSize: 18,
-                                    },
-                                }}
                                 // fetchDetails={true}
                                 // enablePoweredByContainer={false}
                                 returnKeyType={"search"}
@@ -95,10 +88,16 @@ const HomeScreen = () => {
                                         <Pressable
                                             onPress={() => {
                                                 dispatch(setOrigin({
-                                                    locationLat: item.lat,
-                                                    locationLon: item.lon,
+                                                    location: {
+                                                        lat: item.lat,
+                                                        lon: item.lon,
+                                                    },
                                                     description: item.display_address
-                                                }))
+                                                }));
+
+                                                dispatch(setDestination(null))
+
+                                                console.log(item.lat)
                                                 console.log(item.lon)
                                             }}
                                         >
