@@ -77,8 +77,9 @@ const HomeScreen = () => {
                             <TextInput
                                 placeholder={'Find Location'}
                                 onChangeText={textInput => onChangeText(textInput)}
-                                // fetchDetails={true}
+                                fetchDetails={true}
                                 // enablePoweredByContainer={false}
+
                                 returnKeyType={"search"}
                                 minLength={2}
                             />

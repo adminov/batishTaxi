@@ -11,16 +11,29 @@ const Map = () => {
     const latitude = parseInt(origin.location.lat),
         longitude =  parseInt(origin.location.lon)
 
+    console.log(typeof origin.description)
     return (
         <MapView
             style={tw`flex-1`}
+            mapType={"mutedStandard"}
             initialRegion={{
                 latitude: latitude,
                 longitude: longitude,
-                latitudeDelta: 0.005,
-                longitudeDelta: 0.005,
+                latitudeDelta: 0.0155,
+                longitudeDelta: 0.0155,
             }}
         >
+            {origin.location && (
+                <Marker
+                    coordinate={{
+                        latitude: latitude,
+                        longitude: longitude,
+                    }}
+                    title={"Origin"}
+                    description={`${origin.description}`}
+                    identifier={"origin"}
+                />
+            )}
         </MapView>
     );
 };
