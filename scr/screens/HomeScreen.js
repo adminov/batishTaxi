@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import {
+    Text,
     Pressable,
     View,
     SafeAreaView,
     Image,
-    TouchableWithoutFeedback,
     TextInput,
-    FlatList,
-    Text,
+    FlatList, TouchableWithoutFeedback,
+
 } from "react-native";
 import tw from "tailwind-react-native-classnames"
 import NavOptions from "../components/NavOptions";
@@ -16,12 +16,14 @@ import {GOOGLE_MAPS_APIKEY} from "@env";
 import {useDispatch} from "react-redux";
 import {setOrigin, setDestination} from "../navSlice/navSlice"
 
+
 const HomeScreen = () => {
 
     const dispatch = useDispatch();
 
     const [input, setInput] = useState('');
     const [dataOne, setDataOne] = useState([]);
+    const [autoComplete, setAutoComplete] = useState('');
 
 
     const onChangeText = async (text) => {
@@ -37,8 +39,7 @@ const HomeScreen = () => {
         }
     }
 
-    const getItemText = (item, index) => {
-        console.log(item, index)
+    const getItemText = (item) => {
         let mainText = item.address.name;
         if (item.type === "city" && item.address.state) {
             mainText += ", " + item.address.state
@@ -59,7 +60,16 @@ const HomeScreen = () => {
         )
     }
 
+    const autoCompleteFan = (item) => {
+        let mainText = item.address.name;
+        if (item.type === "city" && item.address.state) {
+            mainText += ", " + item.address.state
+            return  setAutoComplete(mainText + ','+ item.address.country)
+        }
+    }
+
     console.log(dataOne)
+    console.log(autoComplete)
 
     return (
             <SafeAreaView style={tw`bg-white h-full`}>
@@ -72,47 +82,42 @@ const HomeScreen = () => {
                         }}
                         source={{uri: "https://links.papareact.com/gzs"}}
                     />
-                    <TouchableWithoutFeedback>
-                        <SafeAreaView >
-                            <TextInput
-                                placeholder={'Find Location'}
-                                onChangeText={textInput => onChangeText(textInput)}
-                                fetchDetails={true}
-                                // enablePoweredByContainer={false}
+                    <TextInput
+                        placeholder={'Find Location'}
+                        onChangeText={textInput => onChangeText(textInput)}
+                        fetchDetails={true}
+                        // enablePoweredByContainer={false}
+                        returnKeyType={"search"}
+                        minLength={2}
+                    />
+                        <FlatList
+                            data={dataOne}
+                            renderItem={({item}) => (
+                                <Pressable
+                                    onPress={() => {
+                                        dispatch(setOrigin({
+                                            location: {
+                                                lat: item.lat,
+                                                lon: item.lon,
+                                            },
+                                            description: item.display_address
+                                        }));
+                                        dispatch(setDestination(null))
+                                        autoCompleteFan(item)
 
-                                returnKeyType={"search"}
-                                minLength={2}
-                            />
-                            <FlatList
-                                data={dataOne}
-                                renderItem={({item, index}) => (
-                                        <Pressable
-                                            onPress={() => {
-                                                dispatch(setOrigin({
-                                                    location: {
-                                                        lat: item.lat,
-                                                        lon: item.lon,
-                                                    },
-                                                    description: item.display_address
-                                                }));
-
-                                                dispatch(setDestination(null))
-
-                                                console.log(item.lat)
-                                                console.log(item.lon)
-                                            }}
-                                        >
-                                            {
-                                                getItemText(item, index)
-                                            }
-                                        </Pressable>
-                                )}
-                                // keyExtractor={item => item.id}
-                                key={item => item.id}
-                                showsVerticalScrollIndicator={false}
-                            />
-                        </SafeAreaView>
-                    </TouchableWithoutFeedback>
+                                        console.log(item.lat)
+                                        console.log(item.lon)
+                                    }}
+                                >
+                                    {
+                                        getItemText(item)
+                                    }
+                                </Pressable>
+                            )}
+                            // keyExtractor={item => item.id}
+                            // removeClippedSubviews={true}
+                            key={item => item.id}
+                        />
 
                     <NavOptions/>
                 </View>
