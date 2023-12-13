@@ -6,7 +6,7 @@ import {
     SafeAreaView,
     Image,
     TextInput,
-    FlatList, TouchableWithoutFeedback,
+    FlatList,
 
 } from "react-native";
 import tw from "tailwind-react-native-classnames"
