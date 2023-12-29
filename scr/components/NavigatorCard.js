@@ -4,13 +4,13 @@ import tw from "tailwind-react-native-classnames/dist";
 import {useDispatch} from "react-redux";
 import {setDestination} from "../navSlice/navSlice";
 import {GOOGLE_MAPS_APIKEY} from "@env";
-import {useNavigation} from "@react-navigation/core";
+// import {useNavigation} from "@react-navigation/core";
 import {RideOptionsCard} from "./RideOptionsCard";
 
 
 const NavigatorCard = () => {
     const dispatch = useDispatch()
-    const navigation = useNavigation()
+    // const navigation = useNavigation()
 
     const [input, setInput] = useState('');
     const [dataOne, setDataOne] = useState([]);
@@ -54,43 +54,45 @@ const NavigatorCard = () => {
         <SafeAreaView style={tw`bg-white flex-1`}>
             <Text style={tw`text-center py-5 text-xl`}>Good morning, BatishTaxi</Text>
             <View style={tw`border-t border-gray-200 flex-shrink`}>
-                <TextInput
-                    placeholder={'Find Location'}
-                    onChangeText={textInput => onChangeText(textInput)}
-                    fetchDetails={true}
-                    // enablePoweredByContainer={false}
-                    returnKeyType={"search"}
-                    minLength={2}
-                />
-                <FlatList
-                    data={dataOne}
-                    renderItem={({item}) => (
-                        <Pressable
-                            onPress={() => {
-                                dispatch(setDestination({
-                                    location: {
-                                        lat: item.lat,
-                                        lon: item.lon,
-                                    },
-                                    description: item.display_address
-                                }));
+                <View style={toInputBoxStyles}>
+                    <TextInput
+                        placeholder={'Find Location'}
+                        onChangeText={textInput => onChangeText(textInput)}
+                        fetchDetails={true}
+                        // enablePoweredByContainer={false}
+                        returnKeyType={"search"}
+                        minLength={2}
+                    />
+                    <FlatList
+                        data={dataOne}
+                        renderItem={({item}) => (
+                            <Pressable
+                                onPress={() => {
+                                    dispatch(setDestination({
+                                        location: {
+                                            lat: item.lat,
+                                            lon: item.lon,
+                                        },
+                                        description: item.display_address
+                                    }));
 
 
-                                // navigation.navigate(RideOptionsCard)
-                                console.log(item.lat)
-                                console.log(item.lon)
-                            }}
-                        >
-                            {
-                                getItemText(item)
-                            }
-                        </Pressable>
-                    )}
-                    // keyExtractor={item => item.id}
-                    // removeClippedSubviews={true}
-                    key={item => item.id}
-                />
-                {/*<View>*/}
+                                    // navigation.navigate(RideOptionsCard)
+                                    console.log('navigator' + item.lat)
+                                    console.log('navigator' + item.lon)
+                                }}
+                            >
+                                {
+                                    getItemText(item)
+                                }
+                            </Pressable>
+                        )}
+                        // keyExtractor={item => item.id}
+                        // removeClippedSubviews={true}
+                        key={item => item.id}
+                    />
+
+                </View>
                 {/*    <GooglePlacesAutocomplete*/}
                 {/*        placeholder={"where to"}*/}
                 {/*        fetchDetails={true}*/}
@@ -111,7 +113,7 @@ const NavigatorCard = () => {
                 {/*        nearbyPlacesAPI={"GooglePlacesSearch"}*/}
                 {/*        debounce={400}*/}
                 {/*    />*/}
-                {/*</View>*/}
+
             </View>
         </SafeAreaView>
     );
